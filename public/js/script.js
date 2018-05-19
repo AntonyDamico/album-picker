@@ -12,15 +12,14 @@ ui.results.addEventListener("click", e => {
   if (e.target.classList.contains("add-album")) {
     const selectedAlbum = e.target.parentElement;
     ui.addAlbum(selectedAlbum);
-    lastfm.postAlbum(parseAlbumHTML(selectedAlbum.childNodes));
+    lastfm.postAlbum(parseAlbumHTML(selectedAlbum));
   }
 });
 
 function parseAlbumHTML(elements) {
-  console.log(elements)
   let obj = {};
-  obj.name = elements[1].textContent;
-  obj.artist = elements[3].textContent;
-  obj.image = elements[5].getAttribute("src");
+  obj.name = elements.querySelector('.album-name').textContent;
+  obj.artist = elements.querySelector('.artist').textContent;
+  obj.image = elements.querySelector('.album-image').getAttribute("src");
   return obj;
 }

@@ -11,9 +11,9 @@ class UI {
     albums.forEach(album => {
       output += `
       <div class="album">
-        <h1>${album.name}</h1>
-        <h2>${album.artist}</h2>
-        <img src="${album.image[3]["#text"]}" class="result-image"></img>
+        <h1 class="album-name">${album.name}</h1>
+        <h2 class="artist">${album.artist}</h2>
+        <img src="${album.image[3]["#text"]}" class="album-image"></img>
         <button type="submit" class="add-album">Add Album</button>
       </div>
       `;
