@@ -14,6 +14,7 @@ class UI {
         <h1>${album.name}</h1>
         <h2>${album.artist}</h2>
         <img src="${album.image[3]["#text"]}" class="result-image"></img>
+        <button type="submit" class="add-album">Add Album</button>
       </div>
       `;
     });
@@ -21,6 +22,8 @@ class UI {
   }
 
   addAlbum(album) {
+    const button = album.querySelector(".add-album");
+    button.parentNode.removeChild(button);
     this.userAlbums.appendChild(album);
   }
 }

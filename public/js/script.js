@@ -9,7 +9,7 @@ ui.searchBtn.addEventListener("click", e => {
 });
 
 ui.results.addEventListener("click", e => {
-  if (e.target.className === "result-image") {
+  if (e.target.classList.contains("add-album")) {
     const selectedAlbum = e.target.parentElement;
     ui.addAlbum(selectedAlbum);
     lastfm.postAlbum(parseAlbumHTML(selectedAlbum.childNodes));
