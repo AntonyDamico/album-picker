@@ -12,6 +12,7 @@ class UI {
       output += `
       <div class="album">
         <h1>${album.name}</h1>
+        <h2>${album.artist}</h2>
         <img src="${album.image[3]["#text"]}" class="result-image"></img>
       </div>
       `;

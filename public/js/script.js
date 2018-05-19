@@ -17,8 +17,10 @@ ui.results.addEventListener("click", e => {
 });
 
 function parseAlbumHTML(elements) {
+  console.log(elements)
   let obj = {};
   obj.name = elements[1].textContent;
-  obj.image = elements[3].getAttribute("src");
+  obj.artist = elements[3].textContent;
+  obj.image = elements[5].getAttribute("src");
   return obj;
 }
